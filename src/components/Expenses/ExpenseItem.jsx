@@ -4,10 +4,12 @@ import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card"
 
 export default function ExpenseItem(props) {
-    let title = props.name;
+    
+    let [title, setTitle] = useState(props.name)
+    
     const clickHandler = () => {
-        title = "clicked"
-        console.log(title)
+        setTitle("clicked")
+        
     };
     
 
